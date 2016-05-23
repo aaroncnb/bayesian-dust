@@ -29,14 +29,14 @@ def planck_function(wave, temperature):
 def modified_blackbody(wave, temperature, tau=1e-6, beta=1.50, wave0=550e-6):  
     ## Default beta set to 1.5, following Planck 2015 Results
    
-    Blam = planck_function(wave, temperature) # # [ W·sr−1·m−3]
+    Blam = planck_function(wave, temperature) # # [ W*sr-1*m*3]
     
     Bnu = Blam * (wave / c_)
 
     unit_conversion_factor = 1e26 # [Jy] / [W/m^2/Hz]
     
     emissivity_factor = (wave0/wave)**beta # wave0 is the reference wavelength. 
-                                           #The wave0 you choose determines at which wavelength the optical depth is given   
+ 
     S = tau*Bnu*emissivity_factor*unit_conversion_factor             #tau is really "tau_wave0". The dust optical depth @ wave0
     
     return S   # [Jy]
