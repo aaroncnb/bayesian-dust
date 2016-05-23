@@ -19,7 +19,7 @@ def planck_function(wave, temperature):
     Blam = Blam_A / Blam_B
     
 
-    return Blam      # [ W*sr−1*m−3]
+    return Blam      # [ W*sr-1*m-3]
 
 ## The funciton below allows beta to be fixed, or varied:
 ## Whether or not the photometric band coverage we have is sufficent enough to contrain beta...
