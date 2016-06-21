@@ -62,8 +62,7 @@ def modBBfit(wavelengths, initial_guesses, region, color_corrected=False):
     
     return popt, pcov
      
-if __name__ == 'main':
-    
+if True:    
     ## Read-in the data and set
     
     fd_all        = np.genfromtxt("photometry.dat", delimiter=',', comments='#')
